@@ -1,0 +1,27 @@
+
+Создайте хранимую процедуру, которая будет возвращать сводную таблицу (оператор PIVOT),отображающую данные о количестве сотрудников (HumanResources.Employee) 
+работающих вопределенную смену (HumanResources.Shift). Вывести информацию необходимо для каждого отдела(HumanResources.Department). Список названий смен передайте 
+в процедуру через входной параметр.
+Таким образом, вызов процедуры будет выглядеть следующим образом:
+EXECUTE dbo.EmpCountByShift ‘[Day],[Evening],[Night]’
+
+
+
+Вывести значения полей [ProductID], [Name] из таблицы [Production].[Product] и полей[ProductModelID] и [Name] из таблицы [Production].[ProductModel] в виде xml, 
+сохраненного впеременную. Формат xml должен соответствовать примеру:
+<Products> 
+    <Product ID="680"> 
+        <Name>HL Road Frame - Black, 58</Name> 
+            <Model ID="6">
+             <Name>HL Road Frame</Name> 
+             </Model> 
+        </Product> 
+    <Product ID="706">
+    <Name>HL Road Frame - Red, 58</Name> 
+    <Model ID="6"> 
+     <Name>HL Road Frame</Name>
+</Model>
+</Product> 
+</Products>
+
+Создать временную таблицу и заполнить её данными из переменной, содержащей xml
